@@ -35,7 +35,7 @@ end
 else
 io.write('\27[0;35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua install.lua') 
+os.execute('lua inll.lua') 
 end
 if not database:get(Server_Done.."UserSudo_Write") then
 print('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
@@ -46,7 +46,7 @@ database:set(Server_Done.."UserSudo_Write",Id)
 else
 io.write('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end
-os.execute('lua install.lua') 
+os.execute('lua inll.lua') 
 end
 if not database:get(Server_Done.."User_Write") then
 print('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -57,7 +57,7 @@ database:set(Server_Done.."User_Write",User)
 else
 io.write('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end
-os.execute('lua install.lua')
+os.execute('lua inll.lua')
 end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"),database:get(Server_Done.."User_Write")) 
