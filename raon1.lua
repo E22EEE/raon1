@@ -1100,7 +1100,7 @@ UserName = "]]..data.username_..[["
 ]])
 A:close()
 database:del(bot_id.."Ed:DevBots")
-dofile('raon.lua')  
+dofile('raon1.lua')  
 else
 send(msg.chat_id_,msg.id_, "*⚘︙ عذرا صاحب الايدي لا يمتلك معرف ارسل ايدي اخر*")
 end
@@ -1115,10 +1115,10 @@ if text =='تغيير المطور الاساسي ⚘' and not SudoBot(msg) then
 send(msg.chat_id_, msg.id_,'*⚘︙ لا يمكنك تغيير المطور الاساسي*')
 end
 if text == 'تحديث السورس ⚘' and DevRocKsW(msg) then 
-os.execute('rm -rf raon.lua')
-os.execute('wget https://raw.githubusercontent.com/E22EEE/raon1/main/raon.lua')
+os.execute('rm -rf raon1.lua')
+os.execute('wget https://raw.githubusercontent.com/E22EEE/raon1/main/raon1.lua')
 send(msg.chat_id_, msg.id_,' *⚘︙ تم تحديث السورس* \n*⚘︙ لديك اخر اصدار لسورس رآون*\n*⚘︙ الاصدار » { 2.8v}  *')
-dofile('raon.lua')  
+dofile('raon1.lua')  
 end
 if text == 'الاصدار ⚘' and DevRocKsW(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -2314,10 +2314,10 @@ database:set(bot_id..'Num:Add:Bot',Num)
 send(msg.chat_id_, msg.id_,' *⚘︙ تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  >> {'..Num..'} عضو*')
 end
 if text == 'تحديث السورس' and DevRocKsW(msg) then 
-os.execute('rm -rf raon.lua')
-os.execute('wget https://raw.githubusercontent.com/E22EEE/raon1/main/raon.lua')
+os.execute('rm -rf raon1.lua')
+os.execute('wget https://raw.githubusercontent.com/E22EEE/raon1/main/raon1.lua')
 send(msg.chat_id_, msg.id_,' *⚘ ︙تم تحديث السورس * \n*⚘︙ لديك اخر اصدار لسورس رآون*\n*⚘︙ الاصدار » { 2.8v} *')
-dofile('raon.lua')  
+dofile('raon1.lua')  
 end
 if text and text:match("^تغير الاشتراك$") and DevRocKsW(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
@@ -3511,7 +3511,7 @@ send(msg.chat_id_, msg.id_,' *⚘︙تم فتح التكرار*')
 end
 ------------------------------------------------------------------------
 if text == 'تحديث' and DevRocKsW(msg) then
-dofile('raon.lua')  
+dofile('raon1.lua')  
 send(msg.chat_id_, msg.id_, ' *⚘︙ تم تحديث جميع الملفات*') 
 end 
 if text == ("مسح قائمه العام") and DevRocKsW(msg) then
