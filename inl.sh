@@ -11,10 +11,10 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo luaraon install luasocket
-sudo luaraon install luasec
-sudo luaraon install redis-lua
-sudo luaraon install Lua-cURL
+sudo luarocks install luasocket
+sudo luarocks install luasec
+sudo luarocks install redis-lua
+sudo luarocks install Lua-cURL
 sudo service redis-server start
 sudo apt-get update -y
 sudo apt-get install g++-4.7 -y c++-4.7
