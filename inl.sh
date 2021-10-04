@@ -1,8 +1,8 @@
-cd $HOME/raon
+cd $HOME/raon1
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x raon
+chmod +x raon1
 chmod +x Run
 ./Run
 }
