@@ -35,7 +35,7 @@ end
 else
 io.write('\27[0;35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua inll.lua') 
+os.execute('lua install.lua') 
 end
 if not database:get(Server_Done.."UserSudo_Write") then
 print('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
@@ -46,7 +46,7 @@ database:set(Server_Done.."UserSudo_Write",Id)
 else
 io.write('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end
-os.execute('lua inll.lua') 
+os.execute('lua install.lua') 
 end
 if not database:get(Server_Done.."User_Write") then
 print('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -57,31 +57,31 @@ database:set(Server_Done.."User_Write",User)
 else
 io.write('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end
-os.execute('lua inll.lua')
+os.execute('lua install.lua')
 end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"),database:get(Server_Done.."User_Write")) 
-local RunBot = io.open("raon", 'w')
+local RunBot = io.open("raon1", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/raon
+cd $HOME/raon1
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr raon.lua
-wget "https://raw.githubusercontent.com/E22EEE/raon1/main/raon.lua"
+rm -fr raon1.lua
+wget "https://raw.githubusercontent.com/E22EEE/raon1/main/raon1.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./raon.lua -p PROFILE --bot=$token
+./tg -s ./raon1.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("Run", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/raon
+cd $HOME/raon1
 while(true) do
 rm -fr ../.telegram-cli
-screen -S raon -X kill
-screen -S raon ./raon
+screen -S raon1 -X kill
+screen -S raon1 ./raon1
 done
 ]])
 RunTs:close()
