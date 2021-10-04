@@ -10,5 +10,5 @@ chmod +x Run
 if [ "$1" = "ok" ]; then
 install
 fi
-chmod +x install.sh
-lua install.lua
+chmod +x inl.sh
+lua inll.lua
